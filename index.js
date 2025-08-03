@@ -1873,6 +1873,64 @@ function broadcastUpdate() {
   io.emit('data-update', { orders, customers });
 }
 
+// Migration endpoint to load data from JSON to MongoDB
+app.post('/api/migrate', async (req, res) => {
+  try {
+    console.log('🔄 Starting migration...');
+    
+    if (!isConnected) {
+      return res.status(500).json({ message: 'MongoDB not connected' });
+    }
+    
+    // Load data from JSON file
+    const dataFile = path.join(__dirname, 'data_production.json');
+    if (!fs.existsSync(dataFile)) {
+      return res.status(404).json({ message: 'Production data file not found' });
+    }
+    
+    const jsonData = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+    console.log('📊 JSON data loaded:', {
+      orders: jsonData.orders?.length || 0,
+      customers: jsonData.customers?.length || 0,
+      dailySales: jsonData.dailySales?.length || 0,
+      weeklySales: jsonData.weeklySales?.length || 0
+    });
+    
+    // Save to MongoDB
+    if (jsonData.orders && jsonData.orders.length > 0) {
+      await dbService.saveOrders(jsonData.orders);
+      console.log(`✅ Migrated ${jsonData.orders.length} orders`);
+    }
+    
+    if (jsonData.customers && jsonData.customers.length > 0) {
+      await dbService.saveCustomers(jsonData.customers);
+      console.log(`✅ Migrated ${jsonData.customers.length} customers`);
+    }
+    
+    if (jsonData.dailySales && jsonData.dailySales.length > 0) {
+      await dbService.saveDailySales(jsonData.dailySales);
+      console.log(`✅ Migrated ${jsonData.dailySales.length} daily sales`);
+    }
+    
+    if (jsonData.weeklySales && jsonData.weeklySales.length > 0) {
+      await dbService.saveWeeklySales(jsonData.weeklySales);
+      console.log(`✅ Migrated ${jsonData.weeklySales.length} weekly sales`);
+    }
+    
+    console.log('🎉 Migration completed successfully!');
+    res.json({ message: 'Migration completed successfully', data: {
+      orders: jsonData.orders?.length || 0,
+      customers: jsonData.customers?.length || 0,
+      dailySales: jsonData.dailySales?.length || 0,
+      weeklySales: jsonData.weeklySales?.length || 0
+    }});
+    
+  } catch (error) {
+    console.error('❌ Migration failed:', error.message);
+    res.status(500).json({ message: 'Migration failed', error: error.message });
+  }
+});
+
 // Update broadcast function after data changes
 const originalSaveData = saveData;
 saveData = function(data) {
