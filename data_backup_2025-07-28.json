@@ -1,0 +1,207 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "basketNo": 1,
+      "shopName": "UK King Barbering",
+      "customerName": "Mohammad Alizade",
+      "customerPhone": "+447467898243",
+      "customerAddress": "518 Christchurch Road , Boscombe",
+      "customerPostcode": "BH8 8SN",
+      "totalAmount": "52.5",
+      "status": "Delivered",
+      "deliveryNo": "D001",
+      "deliveryNotes": "",
+      "createdAt": "2025-07-28T10:00:00.000Z",
+      "deliveredAt": "2025-07-28T21:38:03.900Z",
+      "paymentMethod": "Balance"
+    },
+    {
+      "id": 2,
+      "basketNo": 2,
+      "shopName": "Barber 77",
+      "customerName": "",
+      "customerPhone": "+447446545751",
+      "customerAddress": "163 New Road , West Parley , Ferndown",
+      "customerPostcode": "BH22 8EH",
+      "totalAmount": "130",
+      "status": "Delivered",
+      "deliveryNo": "D002",
+      "deliveryNotes": "",
+      "createdAt": "2025-07-28T11:30:00.000Z",
+      "deliveredAt": "2025-07-28T18:58:20.002Z",
+      "paymentMethod": "Cash"
+    },
+    {
+      "id": 3,
+      "basketNo": 3,
+      "shopName": "Portchester Hair Salon And Barbers",
+      "customerName": "",
+      "customerPhone": "+447809367105",
+      "customerAddress": "20 West Street , Fareham",
+      "customerPostcode": "PO16 9UZ",
+      "totalAmount": "180.99",
+      "status": "Delivered",
+      "deliveryNo": "D003",
+      "deliveryNotes": "",
+      "createdAt": "2025-07-28T12:15:00.000Z",
+      "deliveredAt": "2025-07-28T18:46:45.906Z",
+      "paymentMethod": "Cash"
+    },
+    {
+      "id": 4,
+      "basketNo": 4,
+      "shopName": "Pro Style Barber",
+      "customerName": "Hama",
+      "customerPhone": "+447523050808",
+      "customerAddress": "48 High Street ",
+      "customerPostcode": "BH15 1BT",
+      "totalAmount": "65.5",
+      "status": "Delivered",
+      "deliveryNo": "D004",
+      "deliveryNotes": "",
+      "createdAt": "2025-07-28T13:45:00.000Z",
+      "deliveredAt": "2025-07-28T18:46:51.907Z",
+      "paymentMethod": "Balance"
+    },
+    {
+      "id": 5,
+      "basketNo": 5,
+      "shopName": "savas 2 Turkish Barber",
+      "customerName": "",
+      "customerPhone": "+447459798350",
+      "customerAddress": "145 High Street ",
+      "customerPostcode": "BH15 1AS",
+      "totalAmount": "110",
+      "status": "Delivered",
+      "deliveryNo": "D005",
+      "deliveryNotes": "",
+      "createdAt": "2025-07-28T14:20:00.000Z",
+      "deliveredAt": "2025-07-28T18:46:57.466Z",
+      "paymentMethod": "Balance"
+    },
+    {
+      "id": 6,
+      "basketNo": 6,
+      "shopName": "Alan's Barber",
+      "customerName": "",
+      "customerPhone": "+447473026239",
+      "customerAddress": "197 Old Chirstchurch ",
+      "customerPostcode": "BH1 1JU",
+      "totalAmount": "130",
+      "status": "Delivered",
+      "deliveryNo": "D006",
+      "deliveryNotes": "",
+      "createdAt": "2025-07-28T15:10:00.000Z",
+      "deliveredAt": "2025-07-28T16:20:09.052Z",
+      "paymentMethod": "Balance"
+    },
+    {
+      "id": 7,
+      "basketNo": 7,
+      "shopName": "Ramze The Barber ",
+      "customerName": "Abdul",
+      "customerPhone": "+447366333676",
+      "customerAddress": "129 West Street",
+      "customerPostcode": "PO16 0DU",
+      "totalAmount": "300",
+      "status": "Delivered",
+      "deliveryNo": "D007",
+      "deliveryNotes": "",
+      "createdAt": "2025-07-28T16:30:00.000Z",
+      "deliveredAt": "2025-07-28T21:25:58.314Z",
+      "paymentMethod": "Balance"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Mohammad Alizade",
+      "shopName": "UK King Barbering",
+      "phone": "+447467898243",
+      "address": "518 Christchurch Road , Boscombe",
+      "postcode": "BH8 8SN",
+      "city": "Bournemouth"
+    },
+    {
+      "id": 2,
+      "shopName": "Barber 77",
+      "name": "",
+      "phone": "+447446545751",
+      "address": "163 New Road , West Parley",
+      "postcode": "BH22 8EH",
+      "city": " Ferndown"
+    },
+    {
+      "id": 3,
+      "shopName": "Portchester Hair Salon And Barbers",
+      "name": "",
+      "phone": "+447809367105",
+      "address": "20 West Street ",
+      "postcode": "PO16 9UZ",
+      "city": " Fareham"
+    },
+    {
+      "id": 4,
+      "shopName": "Pro Style Barber",
+      "name": "Hama",
+      "phone": "+447523050808",
+      "address": "48 High Street ",
+      "postcode": "BH15 1BT",
+      "city": "Poole"
+    },
+    {
+      "id": 5,
+      "shopName": "Savas 2 Turkish Barber",
+      "name": "",
+      "phone": "+447459798350",
+      "address": "145 High Street ",
+      "postcode": "BH15 1AS",
+      "city": "Poole"
+    },
+    {
+      "id": 6,
+      "shopName": "Alan's Barber",
+      "name": "",
+      "phone": "+447473026239",
+      "address": "197 Old Chirstchurch ",
+      "postcode": "BH1 1JU",
+      "city": "Bournemouth"
+    },
+    {
+      "id": 7,
+      "shopName": "Ramze The Barber ",
+      "name": "Abdul",
+      "phone": "+447366333676",
+      "address": "129 West Street",
+      "postcode": "PO16 0DU",
+      "city": "Fareham"
+    }
+  ],
+  "dailySales": [
+    {
+      "id": 1753744577804,
+      "date": "2025-07-28",
+      "totalRevenue": 968.99,
+      "totalOrders": 7,
+      "deliveredOrders": 7,
+      "pendingOrders": 0,
+      "averageOrderValue": 138.42714285714285,
+      "topShop": "Ramze The Barber ",
+      "topShopRevenue": 300,
+      "paymentBreakdown": {
+        "Balance": 658,
+        "Cash": 310.99
+      },
+      "hourlyBreakdown": {
+        "11": 52.5,
+        "12": 130,
+        "13": 180.99,
+        "14": 65.5,
+        "15": 110,
+        "16": 130,
+        "17": 300
+      }
+    }
+  ]
+}
